@@ -1,0 +1,648 @@
+* {
+
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0vh 10vh 0vh 10vh;
+
+  background-color: #f3f4f6f7;
+  font-family: Roboto, Arial, sans-serif;
+  color: #747474;
+
+  -webkit-font-smoothing: antialiased;
+}
+
+.BG {
+  background: url(bg1.jpeg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+
+position: sticky;
+  top: 0;
+  background: #fbf9f9;
+  height: 70px;
+  width: 100%;
+}
+
+label.logo {
+  font-family: "Poppins";
+  color: white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: 500;
+}
+
+label.logo:hover {
+  color: #5eb9ff;
+}
+
+nav ul {
+
+  float: right;
+  margin-right: 20px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: capitalize;
+  color: #747474;
+}
+
+a.active,
+a:hover {
+  color: #00b39b;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
+    width: 60%;
+    height: 100vh;
+    background: #000000c9;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
+}
+
+nav ul li ul {
+  text-align: center;
+  display: none;
+  position: fixed;
+  background-color: rgb(246, 242, 242);
+  padding: 10px;
+}
+
+nav ul li:hover ul {
+  width: 250px;
+  display: block;
+}
+
+nav ul li ul li a {
+  text-align: left;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+
+
+  border-radius: 0px 0px 0px 0px;
+  font-family: Roboto, Arial, sans-serif;
+  color: #747474;
+
+}
+
+nav ul li ul li a:hover {
+
+  height: 1000vh;
+}
+
+img {
+
+  height: 80px;
+  width: 250px;
+}
+
+.center {
+  display: block;
+  margin-left: 90vh;
+  margin-right: auto;
+  margin-top: 20vh;
+  width: 3%;
+  max-width: 100%;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #00b39b;
+  font-size: 1.875em;
+  margin: .7em 0;
+
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Work Sans', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -.3px;
+}
+
+.healthcare {
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  border-style: dashed;
+}
+
+.health {
+  border-style: dotted;
+  font-size: 20px;
+  text-align: justify;
+
+
+}
+
+.service {
+
+  border-width: 2px;
+  border-style: dashed;
+  width: 190vh;
+  height: 80vh;
+}
+
+.service .grid-element {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+}
+
+.for-patients {
+  height: 80vh;
+  width: auto;
+  border-width: 2px;
+  border-style: dashed;
+  background: #00b39b;
+  border-radius: 20px / 30px;
+}
+
+.for-doctors {
+  height: 80vh;
+  width: auto;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: #3d83df;
+  border-radius: 20px / 30px;
+}
+
+.for-clinics {
+  height: 80vh;
+  width: auto;
+  border-width: 2px;
+  border-style: dashed;
+  background-color: #000000;
+  border-radius: 20px / 30px;
+}
+
+.for-patients h1,
+.for-patients h2,
+.for-doctors h1,
+.for-doctors h2,
+.for-clinics h1,
+.for-clinics h2 {
+  color: rgb(243, 249, 249);
+  font-family: Work Sans, Arial, sans-serif;
+  text-align: left;
+  padding: 30px;
+}
+
+#country {
+  width: 35vh;
+  position: relative;
+  display: inline-block;
+  vertical-align: center;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+
+  font-family: Work Sans, Arial, sans-serif;
+  color: #333;
+
+  font-weight: 800;
+  letter-spacing: .04em;
+  font-size: 1rem;
+  text-align: left;
+  text-decoration: none !important;
+  transition: all .2s ease 0s;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+#country :hover {
+  background: hsla(0, 0%, 100%, .9);
+  color: #333
+}
+
+.logo2 {
+
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  border-style: dashed;
+
+
+
+  text-align: justify;
+}
+
+.logos1 {
+  height: 30vh;
+  width: 50vh;
+  border-width: 2px;
+  border-style: dashed;
+
+
+
+
+}
+
+.logos2 {
+  height: 30vh;
+  width: 125vh;
+  border-width: 2px;
+  border-style: dashed;
+  text-align: left;
+  align-items: left;
+}
+
+.logo2 .logos1 h1 {
+  text-align: left;
+  font-family: 'roboto';
+
+
+}
+
+.flexy {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0;
+  list-style: none;
+  width: 67%;
+
+  float: none;
+  width: 100%;
+  margin-top: 1.25rem
+}
+
+
+.flexy a path {
+  transition: all .2s ease 0s;
+  fill: hsla(0, 0%, 67%, .7)
+}
+
+
+.flexy a:hover path {
+  fill: #00bfa5
+}
+
+.flexy * {
+
+  width: 150px;
+  height: 80px;
+
+}
+
+.section-stats {
+  display: block;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-auto-rows: minmax(100px, auto);
+  border-style: dashed;
+
+  width: 100%;
+  height: 640px;
+  border-width: 2px;
+  border-style: dashed;
+  background: #bdf5ee;
+  overflow: hidden;
+}
+
+.left_div {
+  width: 91vh;
+
+
+}
+
+.left_div,
+.right_div {
+  height: 640px;
+  width: auto;
+
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.right_div {
+  /* padding: 5%; */
+  display: flex;
+  float: left;
+  align-items: stretch;
+  align-content: center;
+
+  width: 100%;
+
+}
+
+
+
+.stats .section-stats .left_div img {
+
+
+  display: block;
+  margin-left: 0%;
+  margin-right: auto;
+
+  margin-top: 0vh;
+  width: 70%;
+  max-width: 100%;
+  height: auto;
+
+
+}
+
+.stats .section-stats .left_div h1,
+.stats .section-stats .left_div p {
+  text-align: left;
+}
+
+
+
+.div_1_left,
+.div_1_right,
+.div_2_left,
+.div_2_right {
+  width: 35vh;
+  height: 40vh;
+  border-width: 2px;
+  border-style: dashed;
+
+
+}
+
+
+.grid_element1 {
+
+
+  margin: 0 10px 0 50px;
+  /* width: 100%; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(2,1fr);
+    
+    grid-auto-rows: minmax(100px, auto); */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+}
+
+.grid_element1 .div_1_left {
+  background-color: rgb(252, 248, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.grid_element1 .div_1_right {
+  background-color: rgb(252, 248, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.grid_element2 {
+
+  margin: 0 50px 0 10px;
+  /* width: 100%; */
+  /* display: grid; */
+  /* grid-template-columns: repeat(2,1fr);
+    
+    grid-auto-rows: minmax(100px, auto); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.grid_element2 .div_2_left {
+  background-color: rgb(252, 248, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+.grid_element2 .div_2_right {
+  background-color: rgb(252, 248, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.flag,
+.patients,
+.visits,
+.doctors {
+  width: 40px;
+  height: 50px;
+
+}
+
+.right_div h3 {
+  text-align: center;
+}
+
+.text_between p {
+  text-align: center;
+}
+
+.places {
+  width: 100%;
+  height: 180vh;
+
+  border-width: 2px;
+  border-style: dashed;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: stretch;
+}
+
+.block1,
+.block2,
+.block3 {
+
+  width: 100%;
+  height: 100vh;
+
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.warsaw,
+.Barcelona,
+.Munich,
+.Istanbul,
+.Rome,
+.Bologna,
+.Curitiba,
+.Mexico_city,
+.empty {
+  height: 100%;
+  width: 30%;
+  border-width: 2px;
+  border-style: dashed;
+}
+
+.places .block1 {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.places .block2 {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+}
+
+.places .block3 {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+
+}
+
+.warsaw img,
+.Barcelona img,
+.Munich img,
+.Istanbul img,
+.Rome img,
+.Bologna img,
+.Curitiba img,
+.Mexico_city img {
+  width: 100%;
+  height: 85%;
+  cursor: pointer;
+}
+
+/* description de warsaw */
+.description1,
+.description2,
+.description3,
+.description4,
+.description5,
+.description6,
+.description7,
+.description8 {
+
+  font-size: 1.125em;
+  font-weight: 400;
+  line-height: 1.6666666667;
+  padding: 1.1111111111em
+}
+
+/* le bouton see openings */
+.botton {
+  padding: 6px 12px;
+  font-size: 12px;
+  float: right;
+  /* mettre le bouton a droite */
+  background-color: #0661d8;
+  color: #fbf9f9;
+  border: none;
+  cursor: pointer;
+
+}
+
+.join_us {
+  display: flex;
+  justify-content: center;
+
+}
+
+.bottonfinal {
+
+  padding: 10px 20px;
+  font-size: 13px;
+  text-align: center;
+  background-color: #0661d8;
+  color: #fbf9f9;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+
+}
